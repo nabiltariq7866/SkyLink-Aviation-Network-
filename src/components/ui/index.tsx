@@ -1,0 +1,9 @@
+import React from 'react';import {Check} from 'lucide-react';import {Button} from './Button';import {CustomDropdown} from './CustomDropdown';import {Card} from './Card';import {Modal} from './Modal';import {Stat} from './Stat';import {DataTable} from './DataTable';
+export {Button,CustomDropdown as Dropdown,Card,Modal,Stat,DataTable};
+export function Page({title,sub,actions,children}:{title:string;sub?:string;actions?:React.ReactNode;children:React.ReactNode}){return <><div className="page-head"><div><h1>{title}</h1>{sub&&<p>{sub}</p>}</div>{actions}</div>{children}</>}
+export function Input({label,value,onChange,placeholder}:{label:string;value:string;onChange:(v:string)=>void;placeholder?:string}){return <label className="field"><span>{label}</span><input value={value} onChange={e=>onChange(e.target.value)} placeholder={placeholder}/></label>}
+export function Empty({icon:Icon,title,sub}:{icon:any;title:string;sub:string}){return <div className="empty"><Icon size={28}/><h3>{title}</h3><p>{sub}</p></div>}
+export function Badge({value}:{value:string}){const c=value.toLowerCase().replaceAll(' ','-').replaceAll('/','-');return <span className={'badge '+c}>{value}</span>}
+export function Info({label,value}:{label:string;value:string}){return <div className="info"><span>{label}</span><b>{value}</b></div>}
+export function Timeline({items,activeIndex=items.length-1}:{items:string[];activeIndex?:number}){return <div className="timeline">{items.map((x,i)=>{const done=i<=activeIndex;return <div key={x}><span className={done?'done':''}>{done?<Check size={12}/>:i+1}</span><div><b>{x}</b><small>{done?(i===activeIndex?'Current stage':'Completed'):'Pending'}</small></div></div>})}</div>}
+export function Rank({label,value}:{label:string;value:string}){return <div className="rank"><div><b>{label}</b><small>Verified demand</small></div><strong>{value}</strong></div>}

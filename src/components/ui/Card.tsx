@@ -1,0 +1,1 @@
+import React from 'react';export function Card({title,action,children,className='' }:{title?:string;action?:React.ReactNode;children:React.ReactNode;className?:string}){return <section className={'card '+className}>{title&&<div className="card-head"><h3>{title}</h3>{action}</div>}{children}</section>}

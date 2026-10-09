@@ -1,0 +1,2 @@
+import React from 'react';
+export function Button({children,onClick,variant='primary',icon:Icon,disabled=false,type='button'}:{children:React.ReactNode;onClick?:()=>void;variant?:'primary'|'secondary'|'ghost'|'danger';icon?:any;disabled?:boolean;type?:'button'|'submit'}){return <button type={type} disabled={disabled} className={'btn '+variant} onClick={onClick}>{Icon&&<Icon size={15}/>} {children}</button>}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#17252b"/><stop offset=".62" stop-color="#30434a"/><stop offset="1" stop-color="#11171b"/></linearGradient>
+  <linearGradient id="jet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5f7f8"/><stop offset=".58" stop-color="#aeb9c0"/><stop offset="1" stop-color="#64737b"/></linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4caf50"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+</defs>
+<rect width="1400" height="760" fill="url(#sky)"/>
+<path d="M0 510 Q350 440 720 510 T1400 470 V760 H0Z" fill="#0c1115"/>
+<path d="M0 590 L1400 530 L1400 760 L0 760Z" fill="#151c21"/>
+<path d="M150 710 L650 535" stroke="#e5eaec" stroke-opacity=".2" stroke-width="5" stroke-dasharray="30 24"/>
+<path d="M960 680 L1160 590" stroke="#e5eaec" stroke-opacity=".2" stroke-width="5" stroke-dasharray="30 24"/>
+<g transform="translate(170 265) rotate(-5)">
+ <path d="M40 185 C220 155 390 112 650 104 L1010 120 C1080 125 1125 147 1160 175 C1118 195 1065 202 1002 202 L300 207 C195 208 100 205 40 195Z" fill="url(#jet)"/>
+ <path d="M400 152 L345 30 L375 18 L495 144Z" fill="#aab6bd"/>
+ <path d="M585 199 L700 310 L648 314 L535 210Z" fill="#87969e"/>
+ <path d="M835 121 L1010 54 L1050 65 L954 133Z" fill="#c0c9ce"/>
+ <path d="M160 166 L20 92 L88 92 L232 160Z" fill="#a5b2b9"/>
+ <rect x="535" y="138" width="350" height="34" rx="17" fill="#17242b"/>
+ <path d="M575 137 H860" stroke="url(#accent)" stroke-width="4"/>
+ <circle cx="400" cy="181" r="7" fill="#4caf50"/><circle cx="430" cy="178" r="7" fill="#4caf50"/><circle cx="460" cy="176" r="7" fill="#4caf50"/>
+</g>
+<g transform="translate(1080 120)">
+ <circle cx="95" cy="80" r="38" fill="#c7d0d5"/><path d="M35 175c7-55 30-78 60-78s54 23 61 78" fill="#9caab1"/><path d="M57 77c4-31 18-48 38-48 22 0 37 17 40 48-13-9-26-14-40-14-15 0-27 5-38 14z" fill="#273239"/>
+ <rect x="0" y="195" width="190" height="6" rx="3" fill="url(#accent)"/>
+</g>
+<text x="70" y="82" fill="#f4f7f8" font-family="Arial" font-size="34" font-weight="700">SKYLINK AVIATION NETWORK</text>
+<text x="72" y="116" fill="#aeb9be" font-family="Arial" font-size="18">Private aviation sourcing · verified counterparties · intelligent matching</text>
+</svg>

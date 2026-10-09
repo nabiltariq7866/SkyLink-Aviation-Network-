@@ -1,0 +1,1 @@
+import React from 'react';export function Stat({label,value,delta,icon:Icon,good=true}:{label:string;value:string;delta?:string;icon:any;good?:boolean}){return <div className="stat"><div className="stat-icon"><Icon size={19}/></div><div><small>{label}</small><strong>{value}</strong>{delta&&<span className={good?'up':'down'}>{good?'↑':'↓'} {delta}</span>}</div></div>}

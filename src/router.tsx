@@ -1,0 +1,27 @@
+import React from "react";
+import {createBrowserRouter} from "react-router-dom";
+import {RootApp} from "./app/App";
+import {Dashboard} from "./pages/Dashboard";
+import {AircraftPage,AircraftDetail} from "./pages/Aircraft";
+import {Requirements,RequirementDetail} from "./pages/Requirements";
+import {Matches} from "./pages/Matches";
+import {Network} from "./pages/Network";
+import {BrokerDetail} from "./pages/BrokerDetail";
+import {DealRooms,DealDetail} from "./pages/DealRooms";
+import {Messages} from "./pages/Messages";
+import {Copilot} from "./pages/Copilot";
+import {Alerts} from "./pages/Alerts";
+import {Relationships} from "./pages/Relationships";
+import {SearchPage} from "./pages/Search";
+import {Comparison} from "./pages/Comparison";
+import {Pipeline} from "./pages/Pipeline";
+import {Disclosure} from "./pages/Disclosure";
+import {Integrations} from "./pages/Integrations";
+import {Governance} from "./pages/Governance";
+import {Analytics} from "./pages/Analytics";
+import {Security} from "./pages/Security";
+import {Settings} from "./pages/Settings";
+import {Reports} from "./pages/Reports";
+import {NotFound} from "./pages/NotFound";
+
+export const router=createBrowserRouter([{path:"/",element:<RootApp/>,children:[{index:true,element:<Dashboard/>},{path:"aircraft",element:<AircraftPage/>},{path:"aircraft/:id",element:<AircraftDetail/>},{path:"requirements",element:<Requirements/>},{path:"requirements/:id",element:<RequirementDetail/>},{path:"matches",element:<Matches/>},{path:"network",element:<Network/>},{path:"network/:id",element:<BrokerDetail/>},{path:"deal-rooms",element:<DealRooms/>},{path:"deal-rooms/:id",element:<DealDetail/>},{path:"messages",element:<Messages/>},{path:"copilot",element:<Copilot/>},{path:"alerts",element:<Alerts/>},{path:"relationships",element:<Relationships/>},{path:"search",element:<SearchPage/>},{path:"comparison",element:<Comparison/>},{path:"pipeline",element:<Pipeline/>},{path:"disclosure",element:<Disclosure/>},{path:"integrations",element:<Integrations/>},{path:"governance",element:<Governance/>},{path:"analytics",element:<Analytics/>},{path:"security",element:<Security/>},{path:"reports",element:<Reports/>},{path:"settings",element:<Settings/>},{path:"*",element:<NotFound/>}]}]);
