@@ -30,6 +30,14 @@ checks.push(['Context provider exposes disclosure/task actions', /value=\{\{\.\.
 checks.push(['Synthetic aviation dataset', /for\(let i=aircraft.length;i<150/.test(read(path.join(root,'data/demo.ts'))) && /for\(let i=requirements.length;i<40/.test(read(path.join(root,'data/demo.ts'))) && /for\(let i=brokers.length;i<100/.test(read(path.join(root,'data/demo.ts')))]);
 checks.push(['Generated aviation visual asset', fs.existsSync(path.join(projectRoot,'public/assets/skylink-ai-aviation-suite.png'))]);
 checks.push(['Dynamic transaction timeline', /activeIndex/.test(read(path.join(root,'components/ui/index.tsx'))) && /activeIndex=\{idx\}/.test(read(path.join(root,'pages/DealRooms.tsx')))]);
+checks.push(['Complete aircraft and requirement forms', /Engine program/.test(read(path.join(root,'pages/Aircraft.tsx'))) && /Financing \/ ownership/.test(read(path.join(root,'pages/Requirements.tsx'))) && /Must-have criteria/.test(read(path.join(root,'pages/Requirements.tsx')))]);
+checks.push(['Professional verification and private networks', /Email verification/.test(read(path.join(root,'pages/Network.tsx'))) && /Manual administrator approval/.test(read(path.join(root,'pages/Network.tsx'))) && /PRIVATE_NETWORK_CREATED/.test(read(path.join(root,'pages/Network.tsx')))]);
+checks.push(['Structured alert controls', /Minimum match score/.test(read(path.join(root,'pages/Alerts.tsx'))) && /In-platform \+ Email \+ Mobile/.test(read(path.join(root,'pages/Alerts.tsx')))]);
+checks.push(['Complete collaboration actions', /Invite to Deal Room/.test(read(path.join(root,'pages/Messages.tsx'))) && /Need More Info/.test(read(path.join(root,'pages/Messages.tsx'))) && /Open Aircraft Card/.test(read(path.join(root,'pages/Messages.tsx')))]);
+checks.push(['Extended deal workflow and notes', /Inspection \/ Records Review/.test(read(path.join(root,'pages/DealRooms.tsx'))) && /Private Deal Notes/.test(read(path.join(root,'pages/DealRooms.tsx'))) && /Linked Buyer Requirement/.test(read(path.join(root,'pages/DealRooms.tsx')))]);
+checks.push(['Governance administrative actions', /Suspend user/.test(read(path.join(root,'pages/Governance.tsx'))) && /Expire listing/.test(read(path.join(root,'pages/Governance.tsx')))]);
+checks.push(['Network intelligence analytics', /Cross-border activity/.test(read(path.join(root,'pages/Analytics.tsx'))) && /Time to First Match/.test(read(path.join(root,'pages/Analytics.tsx')))]);
+checks.push(['Exact verified professional/operator demo setup', /i<25\?'Operator'/.test(read(path.join(root,'data/enrich.ts'))) && /verified:true/.test(read(path.join(root,'data/demo.ts')))]);
 
 let failed=0;
 for(const [name,ok] of checks){console.log(`${ok?'PASS':'FAIL'}  ${name}`);if(!ok)failed++;}
