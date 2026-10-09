@@ -26,7 +26,7 @@ const routeNames=['aircraft','requirements','matches','network','deal-rooms','me
 for(const r of routeNames) checks.push([`Route /${r}`,new RegExp(`path:\"${r}\"`).test(router)]);
 
 const context=read(path.join(root,'app/context.tsx'));
-checks.push(['Context provider exposes disclosure/task actions', /value=\{\{\.\.\.value,disclosure,requestDisclosure,approveDisclosure,markAlertRead,addDealTask,completeDealTask\}\}/.test(context)]);
+checks.push(['Context provider exposes disclosure/task actions', /value=\{\{\.\.\.value,disclosure,requestDisclosure,approveDisclosure,(?:revokeDisclosure,)?markAlertRead,addDealTask,completeDealTask\}\}/.test(context)]);
 checks.push(['Synthetic aviation dataset', /for\(let i=aircraft.length;i<150/.test(read(path.join(root,'data/demo.ts'))) && /for\(let i=requirements.length;i<40/.test(read(path.join(root,'data/demo.ts'))) && /for\(let i=brokers.length;i<100/.test(read(path.join(root,'data/demo.ts')))]);
 checks.push(['Generated aviation visual asset', fs.existsSync(path.join(projectRoot,'public/assets/skylink-ai-aviation-suite.png'))]);
 checks.push(['Dynamic transaction timeline', /activeIndex/.test(read(path.join(root,'components/ui/index.tsx'))) && /activeIndex=\{idx\}/.test(read(path.join(root,'pages/DealRooms.tsx')))]);
