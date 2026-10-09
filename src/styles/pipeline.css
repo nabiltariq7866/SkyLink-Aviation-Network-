@@ -1,0 +1,3 @@
+.stage-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:112px;margin-top:10px;padding:14px 12px;border:1px dashed var(--border);border-radius:8px;text-align:center;color:var(--muted)}
+.stage-empty b{color:var(--text2);font-size:12px}
+.stage-empty span{font-size:11px;line-height:1.45}

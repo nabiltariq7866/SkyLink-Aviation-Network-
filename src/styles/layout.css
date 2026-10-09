@@ -1,0 +1,5 @@
+header{gap:24px}
+header>.search{flex:1;min-width:0;max-width:none}
+header>.header-actions{margin-left:0;gap:18px;flex-shrink:0}
+.side-foot{gap:10px}
+@media(max-width:760px){header{gap:8px}header>.header-actions{gap:6px}}

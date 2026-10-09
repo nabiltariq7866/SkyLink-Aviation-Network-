@@ -1,0 +1,2 @@
+.network-toolbar{align-items:flex-end}
+@media(max-width:760px){.network-toolbar{align-items:stretch}}
